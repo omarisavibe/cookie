@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title will be set by JS -->
+    <title>Interactive Cookie Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body dir="ltr"> <!-- Direction will be set by JS -->
+
+    <div class="container">
+        <header class="main-header">
+            <h1 data-lang-key="mainTitle">🍪 Interactive Choc Chip Cookie Guide 🍪</h1>
+            <div class="controls-master">
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">🌍 English</button>
+                    <button class="lang-btn" data-lang="ar">🌍 العربية (مصر)</button>
+                </div>
+                <p class="yield-info" data-lang-key="yieldInfo">Yields: Approx. 18-24 cookies</p>
+             </div>
+        </header>
+
+        <div class="cookie-type-selector">
+            <h2 data-lang-key="chooseStyle">Choose Your Cookie Style:</h2>
+            <div class="button-group">
+                <button class="selector-btn" data-type="classic">
+                    <span class="emoji">⚖️</span> <span data-lang-key="typeClassic">Classic Balanced</span>
+                </button>
+                <button class="selector-btn" data-type="thick">
+                    <span class="emoji">🧱</span> <span data-lang-key="typeThick">Thick & Gooey</span>
+                </button>
+                <button class="selector-btn" data-type="thin">
+                    <span class="emoji">🧇</span> <span data-lang-key="typeThin">Thin & Crispy</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Visual Flow/Key Differences Area -->
+        <div id="key-differences" class="key-differences-container visually-hidden">
+             <h3 data-lang-key="keyDifferencesTitle">🔑 Key Differences for <span id="selected-cookie-name">Your Cookie</span>:</h3>
+             <div class="diff-points">
+                 <div class="diff-point butter-diff">
+                     <h4>🧈 <span data-lang-key="butterTitle">Butter State & Mixing</span></h4>
+                     <p id="butter-method-desc"></p>
+                 </div>
+                 <div class="diff-point chilling-diff">
+                      <h4>🧊 <span data-lang-key="chillingTitle">Chilling Method</span></h4>
+                     <p id="chilling-method-desc"></p>
+                 </div>
+                  <div class="diff-point other-diff">
+                      <h4>⚙️ <span data-lang-key="otherNotesTitle">Other Key Notes</span></h4>
+                      <p id="other-notes-desc"></p>
+                  </div>
+             </div>
+        </div>
+
+        <!-- Detailed Recipe Steps Area -->
+        <div id="recipe-details" class="recipe-container">
+            <div class="placeholder" data-lang-key="placeholderSelect">Select a cookie style above to see the magic happen! ✨</div>
+        </div>
+
+        <!-- Common Tips Section -->
+        <div class="lower-sections">
+            <div class="tip-box">
+                <h3 data-lang-key="tipsTitle">💡 Pro Tips & Science! 🔬</h3>
+                <ul id="tips-list">
+                    <!-- Tips will be populated by JS -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
